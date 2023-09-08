@@ -19,16 +19,6 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
 
-
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = ''
-    city_list = ['washington', 'new york city', 'chicago']
-    while city.lower().strip() not in city_list:
-        print()
-        city = input("Enter city name to be analysed. Valid names are 'chicago', 'new york city', 'washington'. - ")
-        city = city.lower()
-
-
     # get user input for month (all, january, february, ... , june)
     month = ''
     month_list = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
@@ -46,8 +36,16 @@ def get_filters():
         day = input("Enter day of week to be analysed. Valid names are 'all', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'. - ")
         day = day.lower()
 
+     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    city = ''
+    city_list = ['washington', 'new york city', 'chicago']
+    while city.lower().strip() not in city_list:
+        print()
+        city = input("Enter city name to be analysed. Valid names are 'chicago', 'new york city', 'washington'. - ")
+        city = city.lower()
 
     print('-'*40)
+
     return city, month, day
 
 

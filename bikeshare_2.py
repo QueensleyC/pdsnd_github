@@ -91,7 +91,7 @@ def load_data(city, month, day):
         if day != 'all':
             df = df[df['dow'] == day]
 
-        count = 0
+        row = 0
 
         while True:
             view_data = input('Do you want to view 5 lines of raw data? Enter yes or no. - ')
@@ -99,8 +99,8 @@ def load_data(city, month, day):
             if view_data != 'yes':
                 break
             else: 
-                count +=1
-                print(df.iloc[(count-1)*5:(count*5)])
+                row +=1
+                print(df.iloc[(row-1)*5:(row*5)])
 
         
 
